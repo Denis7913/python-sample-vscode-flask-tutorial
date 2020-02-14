@@ -35,7 +35,7 @@ steps:
     method: 'PATCH'
     headers: |
       {
-      "Content-Type":"application/json-patch+json", 
+      "Content-Type":"application/json", 
       "PlanUrl": "$(system.CollectionUri)", 
       "ProjectId": "$(system.TeamProjectId)", 
       "HubName": "$(system.HostType)", 
