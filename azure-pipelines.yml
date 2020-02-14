@@ -28,11 +28,23 @@ steps:
     pip install pytest pytest-azurepipelines
     pytest
   displayName: 'pytest'
-
 - task: InvokeRESTAPI@1
   inputs:
     connectionType: 'connectedServiceName'
+    serviceConnection: 'generic-api'
     method: 'PATCH'
+    headers: |
+      {
+      "Content-Type":"application/json-patch+json", 
+      "PlanUrl": "$(system.CollectionUri)", 
+      "ProjectId": "$(system.TeamProjectId)", 
+      "HubName": "$(system.HostType)", 
+      "PlanId": "$(system.PlanId)", 
+      "JobId": "$(system.JobId)", 
+      "TimelineId": "$(system.TimelineId)", 
+      "TaskInstanceId": "$(system.TaskInstanceId)", 
+      "AuthToken": "$(system.AccessToken)"
+      }
     body: |
       [
         {
@@ -46,4 +58,5 @@ steps:
           "value": "true"
         }
       ]
+    urlSuffix: '/wit/workitems/400655?api-version=5.1'
     waitForCompletion: 'false'
