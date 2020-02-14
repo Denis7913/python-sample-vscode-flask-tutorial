@@ -28,8 +28,22 @@ steps:
     pip install pytest pytest-azurepipelines
     pytest
   displayName: 'pytest'
+
 - task: InvokeRESTAPI@1
   inputs:
     connectionType: 'connectedServiceName'
-    method: 'POST'
+    method: 'PATCH'
+    body: |
+      [
+        {
+          "op": "replace ",
+          "path": "/rev",
+          "value": 16
+        },
+        {
+          "op": "replace",
+          "path": "/fields/WEF_F6F7CD2995A6447DA4C12DDAFAFBCB9D_Kanban.Column.Done",
+          "value": "true"
+        }
+      ]
     waitForCompletion: 'false'
