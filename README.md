@@ -22,4 +22,4 @@ When you submit a pull request, a CLA-bot automatically determines whether you n
 * Contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
 
 
-trigger build
+
