@@ -7,5 +7,5 @@ def test_answer():
     assert func(4) == 5
 
 def test_wrong_answer():
-    assert func(6) == 7
+    assert func(6) != 8
     
