@@ -21,7 +21,9 @@ steps:
 
 - script: |
     python -m pip install --upgrade pip
-#    pip install -r requirements.txt
+    
+    
+    
     pip install click==6.7
     pip install Flask==1.0.2
     pip install itsdangerous==0.24
