@@ -33,6 +33,6 @@ steps:
 
 - script: |
     pip install pytest pytest-azurepipelines
-    pytest test-add.py 
+    pytest test_add.py 
     pytest test_subtract.py
   displayName: 'pytest'
