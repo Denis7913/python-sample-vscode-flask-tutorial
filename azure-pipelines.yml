@@ -21,15 +21,7 @@ steps:
 
 - script: |
     python -m pip install --upgrade pip
-    
-    
-    
-    pip install click==6.7
-    pip install Flask==1.0.2
-    pip install itsdangerous==0.24
-    pip install Jinja2==2.10
-    pip install MarkupSafe==1.0
-    pip install Werkzeug==0.14.1
+    pip install -r requirements.txt 
   displayName: 'Install dependencies'
 
 - script: |
