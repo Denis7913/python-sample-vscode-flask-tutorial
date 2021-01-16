@@ -27,5 +27,5 @@ steps:
 - script: |
     pip install pytest pytest-azurepipelines
     pytest test-add.py 
-    pytest tes_subtract.py
+    pytest test_subtract.py
   displayName: 'pytest'
