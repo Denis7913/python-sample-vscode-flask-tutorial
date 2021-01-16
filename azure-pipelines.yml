@@ -11,7 +11,7 @@ trigger:
     - releases
   paths:
     exclude:
-    - azure-pipelines.yaml
+    - azure-pipelines.*
 
 pool:
   vmImage: 'ubuntu-latest'
