@@ -39,7 +39,6 @@ steps:
 
 - task: PythonScript@0
   inputs:
-    scriptSource: 'inline'
-    script: 'pytest'
+    scriptSource: 'filePath'
+    scriptPath: 'pytest'
     arguments: 'test_add.py'
-    displayName: 'pytest2'
