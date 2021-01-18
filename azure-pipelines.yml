@@ -36,3 +36,10 @@ steps:
     pytest test_add.py 
     pytest test_subtract.py
   displayName: 'pytest'
+
+- task: PythonScript@0
+  inputs:
+    scriptSource: 'inline'
+    script: 'pytest'
+    arguments: 'test_add.py'
+    displayName: 'pytest2'
