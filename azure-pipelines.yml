@@ -37,8 +37,3 @@ steps:
     pytest test_subtract.py
   displayName: 'pytest'
 
-- task: PythonScript@0
-  inputs:
-    scriptSource: 'filePath'
-    scriptPath: 'pytest'
-    arguments: 'test_add.py'
